@@ -1,7 +1,6 @@
 import csv
 import os
 
-
 def analyze_missing_data(input_file='penguins.csv', data_dir='./data'):
     """Reports missing values in CSV"""
     input_path = os.path.join(data_dir, input_file)

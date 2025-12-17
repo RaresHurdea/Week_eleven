@@ -15,6 +15,7 @@ class CommandHandler:
         self.current_data = []
         self.current_filename = None
         self.default_sort = 'merge'
+        self.image_path="900.jpeg"
 
     def list_files(self):
         files = self.file_ops.list_csv_files()
@@ -165,4 +166,5 @@ class CommandHandler:
         fun.draw_ascii_penguin()
 
     def convert_image_to_ascii(self):
-       image_to_ascii.ImageToASCII.generate_ascii()
+        converter = image_to_ascii.ImageToASCII(self.image_path)
+        converter.generate_ascii()
