@@ -97,7 +97,7 @@ class PenguinAnalyzer:
         elif user_action == 'draw_penguin':
             self.handler.draw_penguin()
 
-        elif user_action == 's':
+        elif user_action == 'img_to_ascii':
             self.handler.convert_image_to_ascii()
 
         else:

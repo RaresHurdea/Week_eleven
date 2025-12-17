@@ -16,6 +16,7 @@ def show_help_text():
     boxplot <group> <attribute>  - Create boxplot (group: island or species)
     random_fact                  - Display a random penguin fact
     draw_penguin                 - Draw an ASCII penguin
+    img_to_ascii                 - Convert image to ascii
     help                         - Show this help message
     quit                         - Exit the program
     """)
