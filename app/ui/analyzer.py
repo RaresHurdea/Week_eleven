@@ -78,6 +78,28 @@ class PenguinAnalyzer:
             except ValueError:
                 print("Error: Percent must be a number.")
 
+        elif user_action == 'save_random' and len(parts) >= 3:
+            try:
+                k = int(parts[1])
+                filename = parts[2]
+                self.handler.save_random(k, filename)
+            except ValueError:
+                print("Error: k must be an integer.")
+
+        elif user_action == 'generate' and len(parts) >= 3 and parts[1] == 'research_groups':
+            try:
+                k = int(parts[2])
+                self.handler.generate_research_groups(k)
+            except ValueError:
+                print("Error: k must be an integer.")
+
+        elif user_action == 'split_into_groups' and len(parts) >= 2:
+            try:
+                threshold = float(parts[1])
+                self.handler.split_into_groups(threshold)
+            except ValueError:
+                print("Error: threshold must be a number.")
+
         elif user_action == 'scatter' and len(parts) >= 3:
             self.handler.create_scatter(parts[1], parts[2])
 
